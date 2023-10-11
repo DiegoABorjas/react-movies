@@ -55,5 +55,5 @@ export const deleteMovie = (movieId, token) => {
 // make a search to omdb api
 // https://www.omdbapi.com/?s=blade+runner&apikey=API_KEY_HERE
 export const searchMovies = (query) => {
-  return fetch(`https://www.omdbapi.com/?s=${query}&apikey=ADD_YOUR_API_KEY_HERE`);
+  return fetch(`https://www.omdbapi.com/?s=${query}&apikey=API_KEY_HERE`);
 };
