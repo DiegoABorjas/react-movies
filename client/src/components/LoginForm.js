@@ -56,6 +56,7 @@ const LoginForm = () => {
         <Form.Group className='mb-3'>
           <Form.Label htmlFor='email'>Email</Form.Label>
           <Form.Control
+            className='border-dark'
             type='text'
             placeholder='Your email'
             name='email'
@@ -69,6 +70,7 @@ const LoginForm = () => {
         <Form.Group className='mb-3'>
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
+            className='border-dark'
             type='password'
             placeholder='Your password'
             name='password'

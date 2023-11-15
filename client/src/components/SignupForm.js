@@ -61,6 +61,7 @@ const SignupForm = () => {
         <Form.Group className='mb-3'>
           <Form.Label htmlFor='username'>Username</Form.Label>
           <Form.Control
+            className='border-dark'
             type='text'
             placeholder='Your username'
             name='username'
@@ -74,6 +75,7 @@ const SignupForm = () => {
         <Form.Group className='mb-3'>
           <Form.Label htmlFor='email'>Email</Form.Label>
           <Form.Control
+            className='border-dark'
             type='email'
             placeholder='Your email address'
             name='email'
@@ -87,6 +89,7 @@ const SignupForm = () => {
         <Form.Group className='mb-3'>
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
+            className='border-dark'
             type='password'
             placeholder='Your password'
             name='password'

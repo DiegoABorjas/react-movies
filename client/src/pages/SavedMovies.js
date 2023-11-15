@@ -75,21 +75,21 @@ const SavedMovies = () => {
     <>
       <div fluid='true' className='text-light bg-dark p-5'>
         <Container>
-          <h1>Viewing movies in your watchlist!</h1>
+          <h1>Viewing your watchlist</h1>
         </Container>
       </div>
       <Container>
         <h2 className='pt-5'>
           {userData.savedMovies.length
-            ? `Viewing ${userData.savedMovies.length} saved ${userData.savedMovies.length === 1 ? 'movie' : 'movies'}:`
-            : 'You have no saved movies!'}
+            ? `${userData.savedMovies.length} ${userData.savedMovies.length === 1 ? 'movie from your Watchlist' : 'movies from your Watchlist'}:`
+            : 'You have no movies in your Watchlist'}
         </h2>
         <Row>
           {userData.savedMovies.map((movie) => {
             return (
               <Col md="4" key={movie.movieId}>
                 <Card  border='dark'>
-                  {movie.image ? <Card.Img src={movie.image} alt={`The cover for ${movie.title}`} variant='top' /> : null}
+                  {movie.image ? <a href={`https://www.imdb.com/title/${movie.movieId}/`} target="blank"><Card.Img src={movie.image} alt={`The cover for ${movie.title}`} variant='top' /></a> : null}
                   <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
                     <p className='small'>{movie.authors}</p>

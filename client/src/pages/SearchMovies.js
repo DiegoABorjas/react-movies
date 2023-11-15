@@ -89,12 +89,13 @@ const SearchMovies = () => {
 
   return (
     <>
-      <div className='text-light bg-dark pt-5'>
+      <div className='text-light pt-5'>
         <Container>
           <Form onSubmit={handleFormSubmit}>
             <Row>
               <Col xs={12} md={8}>
                 <Form.Control
+                  className='border-dark'
                   name='searchInput'
                   value={searchInput}
                   onChange={(e) => setSearchInput(e.target.value)}
@@ -117,7 +118,7 @@ const SearchMovies = () => {
         <h2 className='pt-5'>
           {searchedMovies.length
             ? `Viewing ${searchedMovies.length} results:`
-            : 'Search for a movie to begin'}
+            : 'Search for a movie to see results...'}
         </h2>
         <Row>
           {searchedMovies.map((movie) => {
@@ -125,7 +126,7 @@ const SearchMovies = () => {
               <Col md="4" key={movie.movieId}>
                 <Card border='dark'>
                   {movie.image ? (
-                    <Card.Img src={movie.image} alt={`The cover for ${movie.title}`} variant='top' />
+                    <a href={`https://www.imdb.com/title/${movie.movieId}/`} target="blank"><Card.Img src={movie.image} alt={`The cover for ${movie.title}`} variant='top' /></a>
                   ) : null}
                   <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
@@ -137,7 +138,7 @@ const SearchMovies = () => {
                         className='btn-block btn-info'
                         onClick={() => handleSaveMovie(movie.movieId)}>
                         {savedMovieIds?.some((savedMovieId) => savedMovieId === movie.movieId)
-                          ? 'Added to Watchlist'
+                          ? 'In your Watchlist'
                           : 'Add to Watchlist'}
                       </Button>
                     )}

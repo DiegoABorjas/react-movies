@@ -13,20 +13,16 @@ const AppNavbar = () => {
   return (
     <>
       <Navbar bg='dark' variant='dark' expand='lg'>
-        <Container fluid>
-          <Navbar.Brand as={Link} to='/'>
-            React Movies
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls='navbar' />
-          <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
-            <Nav className='ml-auto d-flex'>
-              <Nav.Link as={Link} to='/'>
-                Search For Movies
-              </Nav.Link>
+        <Container fluid className='justify-content-between'>
+          <Navbar.Brand as={Link} to='/'>React Movies</Navbar.Brand>
+          <Navbar.Toggle aria-controls='navbar'/>
+          <Navbar.Collapse id='navbar' className='flex-row-reverse'>
+            <Nav className='ml-auto d-flex justify-content-between'>
+              <Nav.Link as={Link} to='/'>Search For Movies</Nav.Link>
               {/* if user is logged in show saved movies and logout */}
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to='/saved'>
+                  <Nav.Link as={Link} to='/watchlist'>
                     Watchlist
                   </Nav.Link>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
