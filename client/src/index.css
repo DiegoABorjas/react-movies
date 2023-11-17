@@ -1,5 +1,7 @@
 body {
   font-family: 'Rubik', sans-serif;
+  position: relative;
+  min-height: 100vh;
 }
 
 h1,
@@ -14,4 +16,12 @@ h6 {
 .small {
   font-weight: 300;
   font-style: italic;
+}
+
+#footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }

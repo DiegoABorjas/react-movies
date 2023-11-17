@@ -73,11 +73,6 @@ const SavedMovies = () => {
 
   return (
     <>
-      <div fluid='true' className='text-light bg-dark p-5'>
-        <Container>
-          <h1>Viewing your watchlist</h1>
-        </Container>
-      </div>
       <Container>
         <h2 className='pt-5'>
           {userData.savedMovies.length
@@ -88,7 +83,7 @@ const SavedMovies = () => {
           {userData.savedMovies.map((movie) => {
             return (
               <Col md="4" key={movie.movieId}>
-                <Card  border='dark'>
+                <Card  border='' className='mb-4'>
                   {movie.image ? <a href={`https://www.imdb.com/title/${movie.movieId}/`} target="blank"><Card.Img src={movie.image} alt={`The cover for ${movie.title}`} variant='top' /></a> : null}
                   <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>

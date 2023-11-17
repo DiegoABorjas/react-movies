@@ -124,9 +124,9 @@ const SearchMovies = () => {
           {searchedMovies.map((movie) => {
             return (
               <Col md="4" key={movie.movieId}>
-                <Card border='dark'>
+                <Card border='' className='mb-4'>
                   {movie.image ? (
-                    <a href={`https://www.imdb.com/title/${movie.movieId}/`} target="blank"><Card.Img src={movie.image} alt={`The cover for ${movie.title}`} variant='top' /></a>
+                    <a href={`https://www.imdb.com/title/${movie.movieId}/`} target="blank"><Card.Img src={movie.image} alt={`The cover for ${movie.title}`} variant='top' className='' /></a>
                   ) : null}
                   <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
